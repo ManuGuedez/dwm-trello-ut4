@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Column from "./Components/Column/Column.jsx";
+import CreateTaskModal from "./Components/CreateTaskModal/CreateTaskModal.jsx";
 
 function App() {
   const url = "http://localhost:3000/tasks";
@@ -15,15 +16,8 @@ function App() {
     }
   }
 
+  const [createModalIsVisible, setCreateModalIsVisible] = useState(false);
   const [tasks, setTasks] = useState([]);
-
-  // function loadTasks() {
-  //   let tasksPromise = fetchDataAW();
-
-  //   tasksPromise.then((data) => {
-  //     tasks = [...data];
-  //   });
-  // }
 
   useEffect(() => {
     let tasksPromise = fetchDataAW();
@@ -101,13 +95,27 @@ function App() {
 
   const editTask = (task) => {
     updateTask(task);
-    setTasks([...tasks.filter((currentTask) => currentTask.id !== task.id), task]);
-  }
+    setTasks([
+      ...tasks.filter((currentTask) => currentTask.id !== task.id),
+      task,
+    ]);
+  };
 
   const columns = ["Backlog", "To Do", "In Progress", "Blocked", "Done"];
   return (
     <>
       <p className="title is-1">Trello</p>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          marginTop: "10px",
+          marginRight: "10px"
+        }}
+      >
+        <button className="button" onClick={() => {setCreateModalIsVisible(true)}} style={{backgroundColor:"lightpink"}}>+ Add new task</button>
+        {createModalIsVisible && <CreateTaskModal addNewTask={addTask} closeModal={() => setCreateModalIsVisible(false)}/>}
+      </div>
       <div
         className={`columns`}
         style={{

@@ -25,7 +25,7 @@
       "description": "Description 3",
       "assigned": "Asignado 3",
       "priority": "alta",
-      "state": "To Do",
+      "state": "Blocked",
       "deadline": "2024-09-30"
     }
   ]
