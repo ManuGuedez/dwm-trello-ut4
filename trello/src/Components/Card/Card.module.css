@@ -1,0 +1,10 @@
+.card {
+    padding: 10px;
+    padding-top: 10px;
+    text-align: start;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}

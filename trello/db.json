@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Task 1",
+      "description": "Description 1",
+      "assigned": "Asignado 1",
+      "priority": "media",
+      "state": "Backlog",
+      "deadline": "2024-08-28",
+      "date": "2024-08-28"
+    },
+    {
+      "id": "50e1",
+      "title": "Task 2",
+      "description": "Description 2",
+      "assigned": "Asignado 2",
+      "priority": "baja",
+      "state": "In Progress",
+      "deadline": "2024-09-12"
+    },
+    {
+      "id": "6dd3",
+      "title": "Task 3",
+      "description": "Description 3",
+      "assigned": "Asignado 3",
+      "priority": "alta",
+      "state": "To Do",
+      "deadline": "2024-09-30"
+    }
+  ]
+}

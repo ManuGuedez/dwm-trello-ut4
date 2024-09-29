@@ -1,0 +1,49 @@
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Cambio a flex para centrar el contenido */
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+    height: fit-content;
+    max-width: 100%;
+}
+
+.modalContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.field, .fieldDate {
+    width: 45%; /* Cambio para ocupar todo el ancho en dispositivos pequeños */
+    margin-bottom: 10px;
+}
+
+.deadline {
+    background-color: #ffe0e0;
+    border: 2px solid rgb(243, 162, 162);
+    border-radius: 4px;
+    padding: 10px;
+    width: 200px;
+    font-size: 15px;
+    color: black;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
